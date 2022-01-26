@@ -4,7 +4,7 @@
 from datetime import datetime, date, time
 import time as Time
 import json
-import blockchainTest
+from blockchainTest import BlockchainTest
 from Block import Block
 from random import randint
 from timeit import default_timer as timer
@@ -12,7 +12,7 @@ from timeit import default_timer as timer
 #============================================================
 # Create BlockchainTest objcet
 #============================================================
-bct = blockchainTest.BlockchainTest()
+bct = BlockchainTest()
 
 #============================================================
 # Start index at 0
