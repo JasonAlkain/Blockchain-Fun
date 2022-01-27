@@ -13,7 +13,7 @@ from timeit import default_timer as timer
 # Create BlockchainTest objcet
 #============================================================
 bct = BlockchainTest()
-
+bct.difficulcty = 6
 #============================================================
 # Start index at 0
 #============================================================
@@ -72,12 +72,16 @@ print('\n')
 # Print each block in the chain
 #============================================================
 for i in range(len(bct.blockchain)):
+    dif_A = bct.difficulcty
+    dif_B = bct.difficulcty+8
     print('<==============================>')
     print(f'Index: {bct.blockchain[i].index}')
     print(f'Time Stamp: {bct.blockchain[i].timeStamp}')
     print(f'Data: {bct.blockchain[i].data}')
-    print(f'Hash [4:12]: {bct.blockchain[i].hash[4:12]}')
-    print(f'Preceding Hash [4:12]: {bct.blockchain[i].precedingHash[4:12]}')
+    print(f'Hash [{dif_A}:{dif_B}]:')
+    print(f'{bct.blockchain[i].hash[dif_A:dif_B]}')
+    print(f'Preceding Hash [{dif_A}:{dif_B}]:')
+    print(f'{bct.blockchain[i].precedingHash[dif_A:dif_B]}')
     print(f'Nonce: {bct.blockchain[i].nonce}')
     print('<==============================>')
 
