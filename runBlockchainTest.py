@@ -1,9 +1,8 @@
 #============================================================
 # Import Modules
 #============================================================
-from datetime import datetime, date, time
+from datetime import datetime
 import time as Time
-import json
 from blockchainTest import BlockchainTest
 from Block import Block
 from random import randint
@@ -13,7 +12,7 @@ from timeit import default_timer as timer
 # Create BlockchainTest objcet
 #============================================================
 bct = BlockchainTest()
-bct.difficulcty = 6
+bct.difficulcty = 4
 #============================================================
 # Start index at 0
 #============================================================
@@ -37,7 +36,7 @@ print('Start Block Creation...')
 start = timer()
 bct.AddNewBlock(CreateNewBlock('Alpha'))
 end = timer()
-print('Found Block!!')
+print('Block Created!!')
 print(f'Time elapsed: ~{round((end - start), 4)}sec')
 print('<==============================>')
 Time.sleep(1)
